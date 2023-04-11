@@ -1,0 +1,41 @@
+.ven-lout-box {
+    background-color: #ffff;
+    border-radius: 10px;
+    margin-bottom: 2%;
+    padding: 25px 25px;
+}
+.vendor-name {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 3px;
+}
+.ven-button-addprod {
+    border-radius: 10px;
+    padding: 10px 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: #ffff;
+    background-color: #007bfe;
+}
+.ven-button-addprod-div{
+    margin-bottom: 15px;
+    text-align: right;
+}
+.ven-prod-table {
+    margin-top: 40px;
+    width: 100%;
+}
+.ven-prod-table td {
+    border-bottom: solid 1px rgba(87, 87, 87, 0.44);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.ven-prod-table tbody {
+    border-top: solid 2px rgba(87, 87, 87, 0.44);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.ven-prod-table th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

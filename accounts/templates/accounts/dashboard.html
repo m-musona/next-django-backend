@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <br>
+
+    <div class="ven-lout-box row">
+        <div class="col-md-5">
+            <h2 class="vendor-name">CUSTOMERS:</h2>
+            <hr>
+            <div class="card card-body">
+                <a class="btn btn-primary btn-sm btn-block" href="">
+                    Create Customer
+                </a>
+                <table class="'table table-sm">
+                    <tr>
+                        <th>Customer</th>
+                        <th>Phone</th>
+                    </tr>
+
+                    {% for customer in customers %}
+                        <tr>
+                            <td>{{ customer.name }}</td>
+                            <td>{{ customer.phone }}</td>
+                        </tr>
+                    {% endfor %}
+
+                </table>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <h2 class="vendor-name">LAST 5 ORDERS:</h2>
+            <hr>
+            <div class="card card-body">
+                <a class="btn btn-primary btn-sm btn-block" href="">
+                    Create Order
+                </a>
+                <table class="table table-sm">
+                    <tr>
+                        <th>Product</th>
+                        <th>Date Ordered</th>
+                        <th>Status</th>
+                        <th>Update</th>
+                        <th>Remove</th>
+                    </tr>
+
+                    {% for order in orders %}
+                        <tr>
+                            <td>{{ order.product }}</td>
+                            <td>{{ order.date_created }}</td>
+                            <td>{{ order.status }}</td>
+                            <td><a href="">Update</a></td>
+                            <td><a href="">Delete</a></td>
+                        </tr>
+                    {% endfor %}
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="ven-lout-box">
+        <h2 class="vendor-name">My Products</h2>
+
+        <hr>
+
+        <div class="card card-body">
+            <div class="ven-button-addprod-div">
+                <a href="#" class="ven-button-addprod">Add product</a>
+            </div>
+            {% if products %}
+            <table class="table table-sm">
+                <thead>
+                <div>
+                    <tr>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                    </tr>
+                </div>
+                </thead>
+
+                <tbody>
+                    {% for product in products %}
+                        <tr>
+                            <td><a href="#">{{ product.name }}</a></td>
+                            <td>{{ product.category}}</td>
+                            <td>${{ product.price }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>You don't have any products yet...</p>
+        {% endif %}
+        </div>
+    </div>
+{% endblock %}
